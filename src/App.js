@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsx jsx */
+/* eslint-disable-next-line */
+import React from 'react'
+import { firestore } from './firebase/firestore'
+import { fb, t, g, gh } from './svg/imports'
+import { css, jsx } from '@emotion/core'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      css={css`
+        display: flex;
+      `}
+    >
+      <img src={fb} alt="facebook login" />
+      <img src={t} alt="twitter login" />
+      <img src={g} alt="google login" />
+      <img src={gh} alt="github login" />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
