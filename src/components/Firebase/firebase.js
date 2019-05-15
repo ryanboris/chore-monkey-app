@@ -22,6 +22,7 @@ class Firebase {
     this.googleProvider = new app.auth.GoogleAuthProvider()
     this.facebookProvider = new app.auth.FacebookAuthProvider()
     this.twitterProvider = new app.auth.TwitterAuthProvider()
+    this.githubProvider = new app.auth.GithubAuthProvider()
   }
 
   // *** Auth API ***
@@ -38,13 +39,15 @@ class Firebase {
 
   doSignInWithTwitter = () => this.auth.signInWithPopup(this.twitterProvider)
 
+  doSignInWithGithub = () => this.auth.signInWithPopup(this.githubProvider)
+
   doSignOut = () => this.auth.signOut()
 
   doPasswordReset = email => this.auth.sendPasswordResetEmail(email)
 
   doSendEmailVerification = () =>
     this.auth.currentUser.sendEmailVerification({
-      url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT
+      url: 'https://chore-monkey-app.firebaseapp.com/'
     })
 
   doPasswordUpdate = password => this.auth.currentUser.updatePassword(password)
