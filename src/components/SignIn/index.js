@@ -15,7 +15,7 @@ const SignInPage = () => (
     <SignInGoogle />
     <SignInFacebook />
     <SignInTwitter />
-    <SignInGithub />
+    {/* <SignInGithub /> */}
     <PasswordForgetLink />
     <SignUpLink />
   </div>
