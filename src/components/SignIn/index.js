@@ -186,7 +186,7 @@ class SignInFacebookBase extends Component {
   }
 }
 
-class SignInWithGithub extends Component {
+class SignInGithubBase extends Component {
   state = { error: null }
 
   onSumbit = event => {
@@ -301,10 +301,4 @@ const SignInGithub = compose(
 
 export default SignInPage
 
-export {
-  SignInForm,
-  SignInGoogle,
-  SignInFacebook,
-  SignInTwitter,
-  SignInWithGithub
-}
+export { SignInForm, SignInGoogle, SignInFacebook, SignInTwitter, SignInGithub }
