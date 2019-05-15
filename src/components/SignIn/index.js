@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'recompose'
@@ -187,9 +188,13 @@ class SignInFacebookBase extends Component {
 }
 
 class SignInGithubBase extends Component {
-  state = { error: null }
+  constructor(props) {
+    super(props)
+    this.state = { error: null }
+  }
 
   onSumbit = event => {
+    event.preventDefault()
     this.props.firebase
       .doSignInWithGithub()
       .then(socialAuthUser => {
@@ -211,8 +216,6 @@ class SignInGithubBase extends Component {
 
         this.setState({ error })
       })
-
-    event.preventDefault()
   }
 
   render() {
