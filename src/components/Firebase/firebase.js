@@ -1,11 +1,11 @@
 import app from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
-import { config } from './config'
+import { fbConfig } from './config'
 
 class Firebase {
   constructor() {
-    app.initializeApp(config)
+    app.initializeApp(fbConfig)
 
     /* Helper */
 
