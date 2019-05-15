@@ -150,3 +150,6 @@ typings/
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
+build/
+.firebase/
+node_modules
